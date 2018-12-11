@@ -1,0 +1,17 @@
+#install nfs
+sudo apt update 
+
+sudo apt-get -y install nfs-kernel-server
+
+#create folder
+sudo mkdir /home/erudeye/nfs/website -p
+
+#beri hak akses
+sudo chown nobody:nogroup /home/erudeye/nfs/website
+sudo chmod 777 /home/erudeye/nfs/website
+
+#edit access folder share 
+sudo nano /etc/exports
+
+
+sudo systemctl restart nfs-kernel-server
